@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emot Love dan Cinta</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #ffccff; /* Wallpaper pink */
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* Font ceria */
+            margin: 0;
+            color: #d5006d; /* Warna teks */
+        }
+        .emot-button {
+            font-size: 60px; /* Ukuran emotikon */
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        .emot-display {
+            font-size: 36px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #d5006d; /* Judul berwarna */
+            font-size: 48px;
+        }
+        .moving-emot {
+            font-size: 48px;
+            animation: moveEmot 2s infinite alternate; /* Animasi bergerak */
+        }
+        @keyframes moveEmot {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(20px); }
+        }
+    </style>
+</head>
+<body>
+    <h1>coba buka ya adell!</h1>
+    <div class="emot-button" onclick="addEmot()">❤️</div>
+    <div class="emot-display" id="emotDisplay"></div>
+
+    <div class="moving-emot" id="movingEmot">❤️</div>
+
+    <script>
+        function addEmot() {
+            const display = document.getElementById('emotDisplay');
+            display.innerHTML += '❤️ cantik banget adel hari ini :) ';
+        }
+    </script>
+</body>
+</html>
+
